@@ -1,5 +1,5 @@
 # Bioinformatics
-Codes from exercise for bioinformatic, genomics vs.
+Codes from exercise for bioinformatics, genomics vs.
 #
 Gene Alignment Code: 
 
