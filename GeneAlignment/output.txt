@@ -1,5 +1,0 @@
---- Final Results ---- 
- * shows the mismatches
-Alignment Gene 1 and Gene 2 :
-['T', 'A', 'A', 'C', '-', 'C*', 'T*', 'T*', 'T*', 'A', 'T', 'C', 'T', 'G', 'C', 'C*', 'A']
-['T', 'A', 'A', 'C', 'G', 'G*', 'C*', 'C*', 'C*', 'A', 'T', 'C', 'T', '-', 'C', 'G*', 'A']
