@@ -145,4 +145,5 @@ output_file1 = str(output_file1) +'\n'  + str(output_gene) + '\n' + str(output_r
 f_output = open('output.txt', 'w+')
 f_output.write(output_file1)
 f_output.close()
+
 #---------END OF FILE WRITING
