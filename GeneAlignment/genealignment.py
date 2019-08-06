@@ -132,4 +132,5 @@ output_file1 = str(output_file1) +'\n'  + str(aligned_gene_1) + '\n' + str(align
 f_output = open('output.txt', 'w+')
 f_output.write(output_file1)
 f_output.close()
+
 #---------END OF FILE WRITING
