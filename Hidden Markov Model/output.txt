@@ -1,0 +1,4 @@
+--- Final Results ---- 
+ R --> GC Rich region   N --> Not rich region
+['T', 'A', 'A', 'A', 'T', 'C', 'A', 'T', 'G', 'C', 'C', 'C', 'G', 'C', 'C', 'G', 'C', 'G', 'C', 'G', 'C', 'G', 'C', 'A', 'T', 'G', 'T']
+['N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R']
