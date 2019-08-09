@@ -1,0 +1,53 @@
+
+
+f_gene = open('gene_data.txt', 'r')
+readed_gene = f_gene.read()
+f_gene.close()
+
+readed_gene = readed_gene + '*'
+
+def bwt(gene):
+    matrix = []
+    matrix.append(gene)
+    lastcol = []
+    firstcol = []
+
+    for element in range(len(gene)-1):
+        rotated = matrix[element][len(gene)-1 :] + matrix[element][0:len(gene)-1]
+        matrix.append(rotated)
+
+    matrix.sort()
+
+    for element in matrix:
+        lastcol.append(element[-1])
+        firstcol.append(element[0])
+
+    return lastcol
+
+
+def inverse_bwt(gene):
+    matrix = list(gene)
+
+    for element in range(len(gene)):
+        sortedmatrix = sorted(matrix)
+
+        for traverse in range(len(gene)):
+            matrix[traverse] = matrix[traverse] + sortedmatrix[traverse][-1]
+
+    print(sortedmatrix)
+
+    for element in sortedmatrix:
+        if element[-1] == '*':
+            return element
+
+    return gene
+
+def exact_match(sub_gene, gene):
+
+
+
+
+    return sub_gene
+
+
+print(inverse_bwt(bwt(readed_gene)))
