@@ -1,4 +1,4 @@
-# Bioinformatics
+# Computational Biology
 Codes to exercise for bioinformatics, genomics, computational biology vs.
 #
 - Gene Alignment with Dynamic Programming
