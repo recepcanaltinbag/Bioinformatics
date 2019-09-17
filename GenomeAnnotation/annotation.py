@@ -39,7 +39,6 @@ button, values = window.Read()
 print(values)
 cut_number = int(values[0])
 print(values[0])
-input()
 sequence_name = str(values[1][0])
 print(sequence_name)
 
