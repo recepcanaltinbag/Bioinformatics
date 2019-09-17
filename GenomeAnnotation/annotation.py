@@ -2,13 +2,11 @@
 #2019
 #Gene annotation visualization of GFF Files with using pyGUI, GFF Parser, Biopython and DnaFeaturesViewer
 
-
 #pip install dna_features_viewer
 #pip install bokeh pandas
 #pip install biopython
 #pip install PySimpleGUI
-#pip install bcbio-gff 
-
+#pip install bcbio-gff
 
 from dna_features_viewer import GraphicFeature, GraphicRecord
 import PySimpleGUI as sg
@@ -80,8 +78,8 @@ for rec in GFF.parse(in_handle, limit_info=limit_info):
         #record.plot(figure_width=5)
 
 
-
-        if int(len(rec.seq)) > cut_number:
+        print(float(len(rec.seq)/cut_number))
+        if int(len(rec.seq)) > cut_number and float(len(rec.seq)/cut_number) > 1.3:
             element = 0
             while element < int(len(rec.seq)):
                 part = str(element)
@@ -92,6 +90,10 @@ for rec in GFF.parse(in_handle, limit_info=limit_info):
                     element = len(rec.seq)
                 else:
                     element = element + cut_number
+                    if float(len(rec.seq)/element) < 1.3:
+                        zoom_end = len(rec.seq) - 1
+                        element = len(rec.seq)
+
                 part = 'from' + part + 'to' + str(element)
                 output_file_name = path + '/' + sequence_name + part + '.png'
                 cropped_record = record.crop((zoom_start,zoom_end))
@@ -110,6 +112,8 @@ in_handle.close()
 
 popup = "A file is created in working folder named as:  " + output_file_name
 sg.Popup(popup)
+
+
 
 
 
