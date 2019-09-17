@@ -3,6 +3,12 @@
 #Gene annotation visualization of GFF Files with using pyGUI, GFF Parser, Biopython and DnaFeaturesViewer
 
 
+#pip install dna_features_viewer
+#pip install bokeh pandas
+#pip install biopython
+#pip install PySimpleGUI
+#pip install bcbio-gff 
+
 
 from dna_features_viewer import GraphicFeature, GraphicRecord
 import PySimpleGUI as sg
