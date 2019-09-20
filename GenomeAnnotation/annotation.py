@@ -13,7 +13,6 @@ import os
 from BCBio import GFF
 
 cut_number = 12000
-
 start_the_program = False
 
 while start_the_program == False:
@@ -105,24 +104,37 @@ while terminate == False:
             features = []
             part = ''
             for feature in rec.features:
-
+                my_label = ''
                 set_color = '#ccccff'
                 print(feature.type)
-                if str(feature.qualifiers["product"][0]) == 'hypothetical protein':
+                if "product" in feature.qualifiers:
+                    if str(feature.qualifiers["product"][0]) == 'hypothetical protein':
+                        set_color = '#ffcccc'
+                    my_label = str(feature.qualifiers["product"][0])
+                elif "description" in feature.qualifiers:
                     set_color = '#ffcccc'
+                    my_label = str(feature.qualifiers["description"][0])
+                elif "ID" in feature.qualifiers:
+                    set_color = '#ffcccc'
+                    my_label = str(feature.qualifiers["ID"][0])
+                else:
+                    print(feature.qualifiers)
+                    my_label = str(feature.type)
+
                 if feature.type == 'tRNA':
                     set_color = "#ff0000"
 
-                print(str(feature.qualifiers["product"]),1)
+                #print(str(feature.qualifiers["product"]),1)
 
                 smart_cutter.append(feature.location.start)
                 smart_cutter.append(feature.location.end)
 
-
+                print(feature.location.start)
+                print(feature.location.end)
                 features.append(GraphicFeature(start=feature.location.start,
                                end=feature.location.end,
                                strand=feature.location.strand,
-                               color=set_color, label=str(feature.qualifiers["product"][0])))
+                               color=set_color, label=my_label))
 
             record = GraphicRecord(sequence=str(rec.seq), features=features)
             #record.plot(figure_width=5)
@@ -144,7 +156,7 @@ while terminate == False:
                 while element < lentgh_of:
                     part = str(element)
                     zoom_start, zoom_end = element, smart_cutter_function(element + cut_number, smart_cutter)
-                    print(element)
+                    print(element,lentgh_of,'error')
                     if element + cut_number > lentgh_of:
                         zoom_end = lentgh_of - 1
                         element = lentgh_of
@@ -154,7 +166,7 @@ while terminate == False:
                             zoom_end = len(rec.seq) - 1
                             element = len(rec.seq)
 
-
+                    print(zoom_start,zoom_end,"borders")
                     part = 'from' + part + 'to' + str(element)
                     output_file_name = path + '/' + sequence_name + part + '.png'
                     cropped_record = record.crop((zoom_start,zoom_end))
@@ -162,6 +174,7 @@ while terminate == False:
                     ax.figure.savefig(output_file_name, bbox_inches='tight')
 
             else:
+                print('normal')
                 record.plot(figure_width=5)
                 ax, _ = record.plot(figure_width=8)
             #record.plot_translation(ax, (8, 12), fontdict={'weight': 'bold'})
@@ -172,6 +185,9 @@ while terminate == False:
     in_handle.close()
     popup = "A file is created in working folder named as:  " + output_file_name
     sg.Popup(popup)
+
+
+
 
 
 
