@@ -83,9 +83,16 @@ Now, you can see the results are in different formats, search this format types 
 
 ### Hints:
   - Carl Richard Woese
-  - Why we use 16S rRNA for species determination?
   - https://itol.embl.de/upload.cgi
   - https://www.youtube.com/watch?v=KTZIYt8z9zQ
+
+
+### Question:
+  - What is the **.sp** meaning in the naming of species: Pseudomonas sp. VD2 
+  - What is the species level classification of Pseudomonas sp. VD2
+  - Why we use 16S rRNA for species determination?
+  - Why the sequence alignment is important?
+  - What Blast do?
 
 
 
