@@ -1,6 +1,14 @@
+# Seqeunce Alignment and Phylogeny
+
 Sequence Alignment is crucial bioinformatics task and one of the tools for this task is [Clustal Omega](http://www.clustal.org/omega/)
 
+### Terminal
+
+
 If you are new to command line and terminal please watch [this video](https://www.youtube.com/watch?v=jgcXclSXnVo&t=44s)
+
+### Installing CLustalO
+
 
 Now open the terminal and let's start:
 
@@ -29,6 +37,8 @@ cd Projects
 ```
 Now you are in Projects
 
+### Fasta File Format
+
 There are very well defined file formats in the bioinformatics to represent the data, and knowing them is crucial. One of them is .fasta format. Please visit [this site](https://www.ncbi.nlm.nih.gov/genbank/fastaformat/) 
 
 Create and empty file:
@@ -43,7 +53,7 @@ And open it, add this 16S sequence:
 CTAGACAGTGGCTATTTCATCAGCCGTCAGTTCACGAAACTCCCCGGGCGCCAAACCAGGGTCCAGACAGATTGCGCCCATGCTTTCCCGGTGCAACCCCACCACCTTGTTGTTGAAGTGCCCGAACATGCGCTTGACCTGGTGATAACGCCCTTCGACGATCGCCAGCCGGGCCTGGCGCGGGCCGAGGATGTCCAGCAGGGCAGGTTGGGTGGTGAGGTTTTCGAAGGCGAAATAGAACCCCTCGCGAAACCTGGCCACATAGTGCTCGCCAATTTCGTCCTCGGTGTCCACCAGGTAATGCTTGGGCAACTTGGTGGCAGGCTGGGTCAGGCGCCTTGACCACTGGCCATCGTTGGTCAGGATCATCAGGCCGGTGGTGTTGAAGTCCAGGCGCCCGGCTATGTGCAGGTCATCCCGCAACGCTGCGGGCAGCAGGTCGAGCACGGTCGGGTGCTGTGGGTCTTGGGTGGCGCTGACGCAGCCAGTGGGCTTGTGCAGCATCAGGTAGCGGGCCGGGCGGCCGGCCTGCAGCAGTTGCTCGTCCAGCTCCACGCGGCTGAATTCACGCACTTCGGCCAGTGGGTCGCTGACAACCTGGCCGTCCACCCGCACGCGGCGTTGCGCCAGCATCAGTCGGGCTTGCTGGCGGTTGTGGCTGGGCAGGTTGGCGAGAAAACGGTCAAGGCGCAT```
 ```
 
-
+### Blast
 Now lets find other closest species;
 
 Blast is very powerful search engine (some says it is Google of biology), 
@@ -59,6 +69,7 @@ in the results go to **Alignments** tab, download first 10 results with the opti
 
 Now, rename the downloaded files, and combine them into one fasta file named as **Combined_Ecoli.fasta**:
 
+### Alignment
 Before going further, What is [alignment](https://www.youtube.com/watch?v=LhpGz5--isw)? 
 
 
@@ -70,11 +81,11 @@ clustalo -i Combined_Ecoli.fasta -o Pseudomonas_VD2_16S_rRNA.aln --outfmt=clu --
 Now, you can see the results are in different formats, search this format types in the google and find some way to visualize .dnd format. What is .aln format?
 
 
-Hints:
-Carl Richard Woese
-Why we use 16S rRNA for species determination?
-https://itol.embl.de/upload.cgi
-https://www.youtube.com/watch?v=KTZIYt8z9zQ
+### Hints:
+  - Carl Richard Woese
+  - Why we use 16S rRNA for species determination?
+  - https://itol.embl.de/upload.cgi
+  - https://www.youtube.com/watch?v=KTZIYt8z9zQ
 
 
 
