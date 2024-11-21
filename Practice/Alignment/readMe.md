@@ -23,6 +23,7 @@ Now you are in home
 ```
 mkdir Projects
 ```
+
 ```
 cd Projects
 ```
@@ -40,10 +41,15 @@ And open it, add this 16S sequence:
 ```
 >Pseudomonas_VD2_16S_rRNA_gene
 CTAGACAGTGGCTATTTCATCAGCCGTCAGTTCACGAAACTCCCCGGGCGCCAAACCAGGGTCCAGACAGATTGCGCCCATGCTTTCCCGGTGCAACCCCACCACCTTGTTGTTGAAGTGCCCGAACATGCGCTTGACCTGGTGATAACGCCCTTCGACGATCGCCAGCCGGGCCTGGCGCGGGCCGAGGATGTCCAGCAGGGCAGGTTGGGTGGTGAGGTTTTCGAAGGCGAAATAGAACCCCTCGCGAAACCTGGCCACATAGTGCTCGCCAATTTCGTCCTCGGTGTCCACCAGGTAATGCTTGGGCAACTTGGTGGCAGGCTGGGTCAGGCGCCTTGACCACTGGCCATCGTTGGTCAGGATCATCAGGCCGGTGGTGTTGAAGTCCAGGCGCCCGGCTATGTGCAGGTCATCCCGCAACGCTGCGGGCAGCAGGTCGAGCACGGTCGGGTGCTGTGGGTCTTGGGTGGCGCTGACGCAGCCAGTGGGCTTGTGCAGCATCAGGTAGCGGGCCGGGCGGCCGGCCTGCAGCAGTTGCTCGTCCAGCTCCACGCGGCTGAATTCACGCACTTCGGCCAGTGGGTCGCTGACAACCTGGCCGTCCACCCGCACGCGGCGTTGCGCCAGCATCAGTCGGGCTTGCTGGCGGTTGTGGCTGGGCAGGTTGGCGAGAAAACGGTCAAGGCGCAT```
+```
+
 
 Now lets find other closest species;
 
 Blast is very powerful search engine (some says it is Google of biology), 
+
+[For info:](https://youtu.be/WRKQGwh_Mw0?si=wVb43f8I8gB8FWQr)
+
 Open the link:
 https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
 
@@ -52,6 +58,9 @@ And search your 16S_rRNA sequence with blastn.
 in the results go to **Alignments** tab, download first 10 results with the option **Download**, **FASTA, aligned sequence**
 
 Now, rename the downloaded files, and combine them into one fasta file named as **Combined_Ecoli.fasta**:
+
+Before going further, What is [alignment](https://www.youtube.com/watch?v=LhpGz5--isw)? 
+
 
 And run the clustalo alignment:
 ```
